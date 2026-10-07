@@ -135,6 +135,23 @@ main {
 }
 .site-footer .muted { font-size: 0.8rem; }
 
+/* Contact block (About / footer) */
+.contact {
+  margin-top: 18px;
+  padding: 18px 20px;
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-align: left;
+}
+.contact h3 { margin: 0 0 8px; font-size: 1.1rem; color: var(--accent); }
+.contact p { margin: 0 0 10px; }
+.contact ul { list-style: none; margin: 0; padding: 0; }
+.contact li { margin: 6px 0; font-size: 1rem; }
+.contact .label { display: inline-block; min-width: 60px; font-weight: 600; color: var(--muted); }
+.contact code { background: #fff; border: 1px solid var(--line); padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; }
+.site-footer .contact { margin-top: 16px; }
+
 @media (max-width: 560px) {
   body { font-size: 16px; }
   .guide, .transcript, .faq, .about { padding: 22px 18px; }
