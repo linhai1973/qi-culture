@@ -1,5 +1,4 @@
 # Cloudflare Pages 配置（可选，用于 wrangler 直接部署 / 作为文档参考）
 # 多数情况下用 Cloudflare 控制台「连接 GitHub 仓库」方式即可，无需此文件。
 name = "qi-culture"
-account_id = "e4acd0a46935911a79de5b33ed20113e"
 pages_build_output_dir = "."
