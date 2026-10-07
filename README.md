@@ -18,7 +18,6 @@ assets/WhatIsQi_MVP_v2.mp4  ← 视频（自托管，开箱即用）
 assets/5MinuteQigong.pdf     ← 免费指南（Etsy/数字产品素材）
 robots.txt
 sitemap.xml
-.github/workflows/deploy.yml  ← GitHub Pages 一键部署
 wrangler.toml           ← Cloudflare 直传配置（可选）
 ```
 
@@ -30,11 +29,13 @@ python -m http.server 8080
 ```
 
 ## 部署 A：GitHub Pages（一键）
-1. 仓库 Settings → Pages → Build and deployment → Source 选 **GitHub Actions**。
-2. 把本目录内容推到 `main` 分支，`deploy.yml` 会自动构建并发布。
-3. 访问 `https://<用户名>.github.io/qi-culture/`。
+1. 仓库 Settings → Pages → Build and deployment → Source 选 **Deploy from a branch**。
+2. Branch 选 `main`，目录选 `/ (root)`，点 Save。
+3. 推送即发布，访问 `https://<用户名>.github.io/qi-culture/`。
+   （首次需在 Settings 里点一下；之后每次 `git push` 自动更新，无需工作流权限。）
 
-> 推送即部署，无需手动操作。
+> 注：本仓库用「分支发布」而非 GitHub Actions，因为当前 token 无 `workflow` 作用域。
+> 若日后想用 Actions 自动部署，给 token 加 `workflow` 作用域后把 `.github/workflows/deploy.yml` 加回即可。
 
 ## 部署 B：Cloudflare Pages（国内镜像）
 **方式一（推荐，连 GitHub）：**
