@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://linhai1973.github.io/qi-culture/sitemap.xml
