@@ -14,7 +14,7 @@
 index.html              ← 主页（视频 + 文章 + transcript + FAQ + schema）
 assets/style.css        ← 样式
 assets/poster.png       ← 视频封面（AI 生成）
-assets/WhatIsQi_MVP_v2.mp4  ← 视频（自托管，开箱即用）
+assets/WhatIsQi_MVP_v3.mp4  ← 视频（自托管，v3 已去掉戴帽画面）
 assets/5MinuteQigong.pdf     ← 免费指南（Etsy/数字产品素材）
 robots.txt
 sitemap.xml
