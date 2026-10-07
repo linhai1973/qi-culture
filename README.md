@@ -38,14 +38,13 @@ python -m http.server 8080
 > 若日后想用 Actions 自动部署，给 token 加 `workflow` 作用域后把 `.github/workflows/deploy.yml` 加回即可。
 
 ## 部署 B：Cloudflare Pages（国内镜像）
-**方式一（推荐，连 GitHub）：**
-1. 登录 Cloudflare 控制台 → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**。
-2. 选本仓库 → Framework preset 选 **None** → Build command 留空 → Output directory 填 `.`（根目录）。
-3. 点 **Save and Deploy**。之后每次 `git push` 自动同步。
-4. 可选：在 **Custom domains** 绑一个域名（如 `qi.yourdomain.com`），并把 `index.html` 里的
-   `canonical` / sitemap / OG 图片地址改成该域，作为 SEO 主域。
+> **完整逐屏傻瓜指引见 [`CLOUDFLARE_SETUP.md`](./CLOUDFLARE_SETUP.md)**（点哪、填什么、会看到什么、常见坑都有）。
 
-**方式二（wrangler 直传）：**
+最短流程：Cloudflare 控制台 → **Workers 和 Pages** → **创建** → **Pages** → **连接 Git** → 选 `qi-culture` → 框架预设选 **None** → Build command 留空 → 输出目录填 **`.`** → **保存并部署**。之后每次 `git push` 两个站自动同步。
+
+可选：在 **Custom domains** 绑自己的域名（如 `qi.yourdomain.com`），并把 `index.html` 里的 `canonical` / sitemap / OG 图片地址改成该域，作为 SEO 主域。
+
+**方式二（wrangler 直传，可选）：**
 ```bash
 npm i -g wrangler
 cd site
